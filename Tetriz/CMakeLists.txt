@@ -3,4 +3,5 @@ project(Tetriz)
 
 set(CXX_STANDARD 20)
 
-add_executable(tetris main.cpp)
+aux_source_directory(. source)
+add_executable(tetris ${source})
