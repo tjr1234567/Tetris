@@ -1,10 +1,21 @@
 #include <iostream>
+#include <thread>
 #include "terminal.h"
+using namespace std::chrono_literals;
 int main()
 {
-    TermCtrl::move_to(5, 10);
-    TermCtrl::fore_col(214);
-    std::cout << "Hello world" << std::endl;
-    TermCtrl::move_to(10, 1);
+    int row = 1, col = 0;
+
+    TermCtrl::hide_cursor();
+    while (true)
+    {
+        TermCtrl::clear();
+        TermCtrl::move_to(row++, 10);
+        TermCtrl::back_col(White);
+        std::cout << "  ";
+        TermCtrl::reset_col();
+        std::cout << std::flush;
+        std::this_thread::sleep_for(1s);
+    }
     return 0;
 }

@@ -21,3 +21,11 @@ void TermCtrl::reset_col()
 {
     std::cout << CSI << "0m";
 }
+void TermCtrl::hide_cursor()
+{
+    std::cout << CSI << "?25l";
+}
+void TermCtrl::show_cursor()
+{
+    std::cout << CSI << "?25h";
+}
