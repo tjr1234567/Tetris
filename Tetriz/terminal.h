@@ -1,4 +1,5 @@
 // Terminal Control
+#pragma once
 #define White 15
 namespace TermCtrl
 {
