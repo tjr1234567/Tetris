@@ -1,6 +1,7 @@
 // Terminal Control
 #pragma once
 #define White 15
+#define Red 9
 namespace TermCtrl
 {
     void move_to(int row, int col); // move the cursor
